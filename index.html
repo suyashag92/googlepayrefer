@@ -369,6 +369,10 @@
         Copy link
       </button>
     </div>
+    <button onclick="smartRedirect()" style="margin-top:14px; width:100%; background:#fbbc04; color:#1a1a1a; border:none; border-radius:10px; padding:14px; font-size:16px; font-weight:600; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:10px; position:relative; z-index:1;">
+      <i class="ti ti-brand-google" style="font-size:20px;"></i>
+      Open Google Pay &amp; Earn ₹21 Free
+    </button>
   </div>
 
   <!-- STAT CARDS -->
@@ -518,13 +522,8 @@
     }
   }
 
-  // Auto-trigger redirect when page loads
-  window.addEventListener('load', function() {
-    // Show page for 2 seconds then auto redirect
-    setTimeout(function() {
-      smartRedirect();
-    }, 2000);
-  });
+  // Auto-trigger redirect only when user clicks the main CTA button
+  // Removed auto-redirect as it was causing blank page issue
 
   function copyLink() {
     navigator.clipboard.writeText(LINK).then(function() {
